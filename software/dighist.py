@@ -1,31 +1,28 @@
-import tkinter as tk
+from tkinter import *
 from tkinter import ttk
 
-# Function to exit the application
-def exit_app():
-    root.quit()
 
 # Main Tkinter window
-root = tk.Tk()
+root = Tk()
 root.title("AI-Based Medical Imaging Diagnosis")
-root.geometry("500x400")
+root.geometry("1500x900")
 root.config(bg="#ff8600")
 
 # Title label at the upper center
-title_label = tk.Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 20))
-title_label.place(relx=0.5, y=50, anchor="center")
+title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 20))
+title_label.place(x=500,y=80)
 
 # Name input button
-name_label = tk.Label(root, text="Name", bg="lightgray", font=("Arial", 15), width=15)
-name_label.place(relx=0.25, y=120, anchor="center")
+name_label = Label(root, text="Enter Name", bg="lightgray", font=("Arial", 12), width=15)
+name_label.place(x=600, y=150, anchor="center")
 
 # Age input button
-age_label = tk.Label(root, text="Age", bg="lightgray", font=("Arial", 15), width=15)
-age_label.place(relx=0.75, y=120, anchor="center")
+age_label = Label(root, text="Enter Age", bg="lightgray", font=("Arial", 12), width=15)
+age_label.place(x=900, y=150, anchor="center")
 
 # Frame for the table
-table_frame = tk.Frame(root, bg="lightgray", bd=2, relief="sunken")
-table_frame.place(relx=0.5, rely=0.55, anchor="center", width=400, height=150)
+table_frame = Frame(root, bg="lightgray", bd=2, relief="sunken")
+table_frame.place(x=700, y=500, anchor="center", width=400, height=150)
 
 # Defining columns for the table
 columns = ("Name", "Age", "Result", "Date", "ID")
@@ -48,8 +45,8 @@ for col in columns:
 table.pack(fill="both", expand=True)
 
 # Exit button in the bottom left corner
-exit_button = tk.Button(root, text="Exit", bg="red", fg="white", font=("Arial", 20), command=exit_app)
-exit_button.place(relx=0.3, rely=0.9, anchor="center")
+exit_button = Button(root, text="Exit", bg="red", fg="white", font=("Arial", 24))
+exit_button.place(x=100,y=700)
 
 # Start the Tkinter event loop
 root.mainloop()
