@@ -1,49 +1,33 @@
 from tkinter import *
 
-root = Tk()
-root.title("AI-Based Medical Imaging Diagnosis")
-root.geometry("500x400")
-root.configure(bg="orange")
-
-# Create and place the title label
-title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", bg="lightgray", font=("Arial", 14), relief="solid", width=40)
-title_label.pack(pady=10)
-
-# Functionality for buttons
-def upload_image():
+root=Tk()
+root.title("AI-Based-Medical-Imaging-Diagnosis")
+root.geometry("1500x900")
+root.config(bg="#ff8600")
+Label( root,text="AI-Based-Medical-Imaging-Diagnosis", font=("Arial", 20),relief="solid",width=35).pack(pady=25)
+def to_upload():
     pass
-
-def preview_image():
+def to_preview():
     pass
-
-def diagnose():
+def to_diagnosis():
     pass
-def show_diagnosis_result():
+def to_result():
     pass
-
-def exit_program():
+def to_exit():
     pass
+bt=Button(root,text="Image Upload",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_upload)
+bt.place(x=530,y=85)
 
-# Create a frame to center the buttons
-frame = Frame(root, bg="orange")
-frame.pack(pady=40)
+bt1=Button(root,text="Image Preview",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_preview)
+bt1.place(x=780,y=85)
 
-# Create and place buttons inside the frame for central alignment
-button1 = Button(frame, text="Image Upload", bg="yellow",fg="green" ,font=("Arial", 12), command=upload_image)
-button1.grid(row=0, column=0, padx=20, pady=10)
+bt2=Button(root,text="Diagnosis",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_diagnosis)
+bt2.place(x=530,y=155)
 
-button2 = Button(frame, text="Image Preview", bg="yellow",fg="green" , font=("Arial", 12), command=preview_image)
-button2.grid(row=0, column=1, padx=20, pady=10)
+bt3=Button(root,text="Diagnosis Result",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_result)
+bt3.place(x=780,y=155)
 
-button3 = Button(frame, text="Diagnosis", bg="yellow", fg="green" ,font=("Arial", 12), command=diagnose)
-button3.grid(row=1, column=0, padx=20, pady=10)
+bt4=Button(root,text="Exit",font=("Arial", 15),bg="red" ,fg="green" ,width=20,command=to_exit)
+bt4.place(x=100,y=650)
 
-button4 = Button(frame, text="Diagnosis Result", bg="yellow", fg="green" ,font=("Arial", 12), command=show_diagnosis_result)
-button4.grid(row=1, column=1, padx=20, pady=10)
-
-# Exit button placed in the bottom left corner
-exit_button =Button(root, text="Exit", bg="red", fg="white", font=("Arial", 12), command=exit_program)
-exit_button.place(x=20, y=340, width=100, height=40)
-
-# Run the application
 root.mainloop()

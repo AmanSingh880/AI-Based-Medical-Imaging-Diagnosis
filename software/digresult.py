@@ -3,8 +3,8 @@ from tkinter import *
 # Create the main window
 root = Tk()
 root.title("AI-Based Medical Imaging Diagnosis")
-root.geometry("500x400")
-root.configure(bg="orange")
+root.geometry("1500x900")
+root.config(bg="#ff8600")
 
 # Create and place the title label
 title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", bg="lightgray", font=("Arial", 14), relief="solid", width=40)
