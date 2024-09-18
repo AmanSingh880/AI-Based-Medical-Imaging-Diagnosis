@@ -1,31 +1,17 @@
 from tkinter import *
-root = Tk()
-root.title("AI-Based Medical Imaging Diagnosis")
+root=Tk()
+root.title("AI-Based-Medical-Imaging-Diagnosis")
 root.geometry("1500x900")
 root.config(bg="#ff8600")
-title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", bg="lightgray", font=("Arial", 14), relief="solid", width=40)
-title_label.pack(pady=20)
+Label(root,text="AI-Based-Medical-Imaging-Diagnosis" , font=("Arial",20), relief="solid",width=35).pack(pady=30)
 
-
-name_entry = Entry(root, font=("Arial", 12), justify="center")
-name_entry.insert(0, "Enter Name")
-name_entry.pack(pady=10, ipadx=40, ipady=5)
-
-age_entry = Entry(root, font=("Arial", 12), justify="center")
-age_entry.insert(0, "Enter Age")
-age_entry.pack(pady=10, ipadx=40, ipady=5)
-
-
-def submit():
+def to_exit():
     pass
-
-def go_back():
+def to_submit():
     pass
+e1=Entry(root).place(x=550,y=85,width=340,height=30)
+e2=Entry(root).place(x=550,y=155,width=340,height=30)
+bt=Button(root,text="Back",bg="red",fg="white",font=("Arial",15),width=15,command=to_exit).place(x=200,y=650)
 
-back_button = Button(root, text="Back", bg="red", fg="white", font=("Arial", 12), command=go_back)
-back_button.place(x=50, y=300, width=100, height=50)
-
-submit_button = Button(root, text="Submit", bg="lightgreen", fg="red", font=("Arial", 12), command=submit)
-submit_button.place(x=350, y=300, width=100, height=50)
-
+bt1=Button(root,text="submit",bg="lightgreen",fg="red",font=("Arial",15),width=15,command=to_submit).place(x=1100,y=650)
 root.mainloop()
