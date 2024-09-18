@@ -2,7 +2,7 @@ from tkinter import *
 
 root=Tk()
 root.title("AI-Based-Medical-Imaging-Diagnosis")
-root.geometry("500x900")
+root.geometry("1500x900")
 root.config(bg="#ff8600")
 Label( root,text="AI-Based-Medical-Imaging-Diagnosis", font=("Arial", 20),relief="solid",width=35).pack(pady=25)
 def to_upload():

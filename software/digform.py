@@ -9,6 +9,10 @@ def to_exit():
     pass
 def to_submit():
     pass
+def entry_name():
+    pass
+def entry_age():
+    pass
 e1=Entry(root).place(x=550,y=85,width=340,height=30)
 e2=Entry(root).place(x=550,y=155,width=340,height=30)
 bt=Button(root,text="Back",bg="red",fg="white",font=("Arial",15),width=15,command=to_exit).place(x=200,y=650)
