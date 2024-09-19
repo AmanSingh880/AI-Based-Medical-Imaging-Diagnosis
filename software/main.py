@@ -1,4 +1,5 @@
 from tkinter import *
+import os
 
 root=Tk()
 root.title("AI-Based-Medical-Imaging-Diagnosis")
@@ -6,15 +7,16 @@ root.geometry("1500x900")
 root.config(bg="#ff8600")
 Label( root,text="AI-Based-Medical-Imaging-Diagnosis", font=("Arial", 20),relief="solid",width=35).pack(pady=25)
 def to_upload():
-    pass
+    os.system("software\Imgupl.py")
 def to_preview():
-    pass
+    os.system("software\Imgprev.py")
 def to_diagnosis():
-    pass
+    os.system("software\digform.py")
 def to_result():
-    pass
+    os.system("software\digresult.py")
 def to_exit():
-    pass
+    os.system("software\home.py")
+
 bt=Button(root,text="Image Upload",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_upload)
 bt.place(x=530,y=85)
 

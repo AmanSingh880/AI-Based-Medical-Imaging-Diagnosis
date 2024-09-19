@@ -1,1 +1,1 @@
-font=("Arial", 20)
+digform
