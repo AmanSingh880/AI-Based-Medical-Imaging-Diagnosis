@@ -1,1 +1,1 @@
-digform
+age = int(age)
