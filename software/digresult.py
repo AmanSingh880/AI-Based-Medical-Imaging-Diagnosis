@@ -1,5 +1,5 @@
 from tkinter import *
-import os
+from os import system
 root=Tk()
 root.title("AI-Based-Medical-Imaging-Diagnosis")
 root.geometry("1500x900")
@@ -9,7 +9,8 @@ Label(root,text="Enter Name",font=("Arial",20),fg="skyblue").place(x=450,y=105,w
 Label(root,text="Enter Age",font=("Arial",20),fg="skyblue").place(x=850,y=105,width=200,height=50)
 Label(root,text="Result",font=("Arial",25),fg="blue").place(x=500,y=300,width=500,height=60)
 def to_exit():
-    os.system("software\main.py")
+    root.destroy()
+    system("main.py")
 def enter_name():
     os.system("name.py")
     
