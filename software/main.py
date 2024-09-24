@@ -7,15 +7,15 @@ root.geometry("1500x900")
 root.config(bg="#ff8600")
 Label( root,text="AI-Based-Medical-Imaging-Diagnosis", font=("Arial", 20),relief="solid",width=35).pack(pady=25)
 def to_upload():
-    os.system("software\Imgupl.py")
+    os.system("Imgprev.py")
 def to_preview():
-    os.system("software\Imgprev.py")
+    os.system("Imgprev.py")
 def to_diagnosis():
-    os.system("software\digform.py")
+    os.system("digform.py")
 def to_result():
-    os.system("software\digresult.py")
+    os.system("digresult.py")
 def to_exit():
-    os.system("software\home.py")
+    os.system("home.py")
 
 bt=Button(root,text="Image Upload",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_upload)
 bt.place(x=530,y=85)

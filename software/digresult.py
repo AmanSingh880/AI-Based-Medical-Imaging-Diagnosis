@@ -11,7 +11,8 @@ Label(root,text="Result",font=("Arial",25),fg="blue").place(x=500,y=300,width=50
 def to_exit():
     os.system("software\main.py")
 def enter_name():
-    pass
+    os.system("name.py")
+    
 def enter_age():
     pass
 def result():
