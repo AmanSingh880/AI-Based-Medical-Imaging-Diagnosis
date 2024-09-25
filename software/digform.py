@@ -1,5 +1,5 @@
 from tkinter import *
-import os 
+from os import system 
 
 root=Tk()
 root.title("AI-Based-Medical-Imaging-Diagnosis")
@@ -8,8 +8,11 @@ root.config(bg="#ff8600")
 Label(root,text="AI-Based-Medical-Imaging-Diagnosis" , font=("Arial",20), relief="solid",width=35).pack(pady=30)
 
 def to_exit():
-    os.system("software\main.py")
+    root.destroy()
+    system("main.py")
 def to_submit():
+    root.destroy()
+    system("main.py")
     pass
 def entry_name():
     pass
