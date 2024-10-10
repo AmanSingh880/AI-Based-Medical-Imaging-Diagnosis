@@ -18,8 +18,9 @@ def entry_name():
     pass
 def entry_age():
     pass
-e1=Entry(root).place(x=550,y=85,width=340,height=30)
-e2=Entry(root).place(x=550,y=155,width=340,height=30)
+l1=Label(text="Enter name : ").place(x=400,y=85,height=20)
+e1=Entry(root).place(x=550,y=85,width=340,height=40)
+e2=Entry(root).place(x=550,y=155,width=340,height=40)
 bt=Button(root,text="Back",bg="red",fg="white",font=("Arial",15),width=15,command=to_exit).place(x=200,y=650)
 
 bt1=Button(root,text="submit",bg="lightgreen",fg="red",font=("Arial",15),width=15,command=to_submit).place(x=1100,y=650)

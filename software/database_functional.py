@@ -1,17 +1,18 @@
 import sqlite3
-def insert(id,name,age,result,date):
+def insert(id,name,age,P_Pos,result,date):
     mydb=sqlite3.connect('diagonis.db')
     mycursor=mydb.cursor()
-    mycursor.execute("INSERT INTO History(ID,NAME,AGE, RESULT ,DATE) VALUES(?,?,?,?,?) ",(id,name,age,result,date))
+    mycursor.execute("INSERT INTO History(ID,NAME,AGE,P_POS, RESULT ,DATE) VALUES(?,?,?,?,?,?) ",(id,name,age,P_Pos,result,date))
     mydb.commit()
-insert('1','arnav','19','normal','24-09-2024')
+# insert('1','arnav','19','0','normal','24-09-2024')
 
 # select all from table function
 def select_all():
     mydb=sqlite3.connect('diagonis.db')
     mycursor=mydb.cursor()
-    mycursor.execute("SELECT * FROM HISTORY")
+    mycursor.execute("SELECT * FROM HISTORY order by ID DESC")
     TwoD_list=mycursor.fetchall()
+    print(TwoD_list)
     mydb.commit()
 select_all()
 
@@ -23,6 +24,5 @@ def select_latest_id():
     mycursor.execute("SELECT MAX(ID) FROM HISTORY")
     latest_id=mycursor.fetchone()
     mydb.commit()
-
-def showfilter(two_d_list):
-    pass
+    return latest_id[0]
+# print(select_latest_id())

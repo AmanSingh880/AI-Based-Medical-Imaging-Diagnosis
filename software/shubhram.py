@@ -14,7 +14,6 @@ from tkinter import filedialog
 def save_image_path():
     image_path = filedialog.askopenfilename(title="Select an Image", 
                                             filetypes=[("Image Files", "*.png;*.jpg;*.jpeg;*.bmp")])
-    
     if image_path:
         with open("image_path.txt", "w") as file:
             file.write(image_path)
