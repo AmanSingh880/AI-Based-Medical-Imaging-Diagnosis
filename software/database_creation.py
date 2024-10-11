@@ -8,6 +8,7 @@ mycursor.execute('''
         ID TEXT,
         NAME TEXT,
         AGE TEXT,
+        P_POS TEXT,
         RESULT TEXT,
         DATE TEXT
     )

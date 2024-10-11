@@ -22,4 +22,6 @@ start_button.place(x=600,y=300)
 exit_button =Button(root, text="Exit", bg="red", fg="white", font=("Arial", 24),command=exit)
 exit_button.place(x=100,y=700)
 
+
+
 root.mainloop()

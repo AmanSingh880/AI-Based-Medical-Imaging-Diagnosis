@@ -11,11 +11,7 @@ Label(root,text="Result",font=("Arial",25),fg="blue").place(x=500,y=300,width=50
 def to_exit():
     root.destroy()
     system("main.py")
-def enter_name():
-    os.system("name.py")
-    
-def enter_age():
-    pass
+# here no need of name and age functon 
 def result():
     pass
 Button(root,text="back",font=("Arial",15),bg="red",fg="white",width=15,command=to_exit).place(x=100,y=650)
