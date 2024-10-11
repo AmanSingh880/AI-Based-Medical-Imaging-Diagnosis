@@ -23,6 +23,5 @@ def select_latest_id():
     mycursor.execute("SELECT MAX(ID) FROM HISTORY")
     latest_id=mycursor.fetchone()
     mydb.commit()
+    return latest_id
 
-def showfilter(two_d_list):
-    pass
