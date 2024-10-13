@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-D:/PYTHON/AI Medical Project/AI-Based-Medical-Imaging-Diagnosis/Resouces/UI Design/Page 1.png
-=======
-C:/Aman/AI-Based-Medical-Imaging-Diagnosis/software/Inputs/IM-0035-0001.jpeg
->>>>>>> 9663cf121525f457feefda5bb129dbe5c9649e2a
