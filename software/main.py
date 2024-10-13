@@ -1,18 +1,19 @@
 from tkinter import *
 import os
-
+from datetime import datetime
 root=Tk()
 root.title("AI-Based-Medical-Imaging-Diagnosis")
 root.geometry("1500x900")
 root.config(bg="#ff8600")
-Label( root,text="AI-Based-Medical-Imaging-Diagnosis", font=("Arial", 20),relief="solid",width=35).pack(pady=25)
+def get_current_date():
+    a= datetime.now().strftime("%Y-%m-%d")
+    date_label.configure(text=a)
 def to_upload():
     root.destroy()
-    os.system("Imgprev.py")
+    os.system("Imgupl.py")
 def to_exit():
     os.system("home.py")
     root.destroy()
-    os.system("Imgupl.py")
 def to_preview():
     root.destroy()
     os.system("Imgprev.py")
@@ -21,21 +22,27 @@ def to_diagnosis():
     os.system("digform.py")
 def to_result():
     root.destroy()
-    os.system("digresult.py")
+    os.system("dighist.py")
 def to_exit():
     root.destroy()
+title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 25))
+title_label.place(x=500,y=80)
+
+date_label = Label(root, text="Present Date", font=("Arial", 20))
+date_label.place(x=650,y=150)
+get_current_date()
 
 bt=Button(root,text="Image Upload",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_upload)
-bt.place(x=530,y=85)
+bt.place(x=530,y=200)
 
 bt1=Button(root,text="Image Preview",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_preview)
-bt1.place(x=780,y=85)
+bt1.place(x=800,y=200)
 
 bt2=Button(root,text="Diagnosis",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_diagnosis)
-bt2.place(x=530,y=155)
+bt2.place(x=530,y=300)
 
 bt3=Button(root,text="Diagnosis Result",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_result)
-bt3.place(x=780,y=155)
+bt3.place(x=800,y=300)
 
 bt4=Button(root,text="Exit",font=("Arial", 15),bg="red" ,fg="green" ,width=20,command=to_exit)
 bt4.place(x=100,y=650)
