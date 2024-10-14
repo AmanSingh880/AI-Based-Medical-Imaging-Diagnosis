@@ -32,10 +32,13 @@ def data_trans(result):
     def select_latest_id():
         mydb=sqlite3.connect('diagonis.db')
         mycursor=mydb.cursor()
-        mycursor.execute("SELECT MAX(ID) FROM HISTORY")
-        latest_id=mycursor.fetchone()
+        mycursor.execute("SELECT *FROM HISTORY")
+        latest_id=mycursor.fetchall()
+        latest_id.reverse()
         mydb.commit()
-        return latest_id[0]
+        if(len(latest_id)==0):
+            return 0
+        return latest_id[0][0]
     def insert(id,name,age,P_Pos,result,date):
         mydb=sqlite3.connect('diagonis.db')
         mycursor=mydb.cursor()

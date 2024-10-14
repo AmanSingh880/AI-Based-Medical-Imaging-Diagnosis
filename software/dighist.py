@@ -9,9 +9,9 @@ root = Tk()
 def select_all():
     mydb = sqlite3.connect('diagonis.db')
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM HISTORY order by ID DESC")
+    mycursor.execute("SELECT * FROM HISTORY")
     TwoD_list = mycursor.fetchall()
-    
+    TwoD_list.reverse()    
     # Clear the table before inserting new data
     for item in table.get_children():
         table.delete(item)

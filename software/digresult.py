@@ -13,8 +13,9 @@ def en(name,age,result,p_p):
 def select_all():
     mydb=sqlite3.connect('diagonis.db')
     mycursor=mydb.cursor()
-    mycursor.execute("SELECT * FROM HISTORY order by ID DESC")
+    mycursor.execute("SELECT * FROM HISTORY")
     TwoD_list=mycursor.fetchall()
+    TwoD_list.reverse()
     return TwoD_list
     mydb.commit()
 a=select_all()[0]

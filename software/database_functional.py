@@ -10,19 +10,21 @@ def insert(id,name,age,P_Pos,result,date):
 def select_all():
     mydb=sqlite3.connect('diagonis.db')
     mycursor=mydb.cursor()
-    mycursor.execute("SELECT * FROM HISTORY order by ID DESC")
+    mycursor.execute("SELECT * FROM HISTORY")
     TwoD_list=mycursor.fetchall()
+    TwoD_list.reverse()
     print(TwoD_list)
     mydb.commit()
-select_all()
+# select_all()
 
 # this function is for select the latest id from the table  
 
 def select_latest_id():
     mydb=sqlite3.connect('diagonis.db')
     mycursor=mydb.cursor()
-    mycursor.execute("SELECT MAX(ID) FROM HISTORY")
-    latest_id=mycursor.fetchone()
+    mycursor.execute("SELECT *FROM HISTORY")
+    latest_id=mycursor.fetchall()
+    latest_id.reverse()
     mydb.commit()
-    return latest_id[0]
-# print(select_latest_id())
+    return latest_id[0][0]
+print(select_latest_id())
