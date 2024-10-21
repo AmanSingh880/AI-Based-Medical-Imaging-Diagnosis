@@ -25,15 +25,14 @@ def showimg():
     img_path = os.path.join('uploads', 'image.jpeg')
     
 
-
-title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 20))
-title_label.place(x=500,y=80)
+title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 36, "bold"), fg="black", bg="#ff8600") 
+title_label.place(x=330,y=50)
 def get_current_date():
     a= datetime.now().strftime("%Y-%m-%d")
     date_label.configure(text=a)
 
-date_label = Label(root, text="Present Date", bg="lightgray", font=("Arial", 15))
-date_label.place(x=600,y=150)
+date_label = Label(root, text="Present Date", font=("Arial", 25,"bold"),  bg="#ff8600")
+date_label.place(x=600,y=130)
 get_current_date()
 
 img_label=Label()

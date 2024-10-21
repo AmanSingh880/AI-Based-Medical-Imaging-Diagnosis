@@ -7,7 +7,7 @@ root=Tk()
 root.title("AI-Based-Medical-Imaging-Diagnosis")
 root.geometry("1500x900")
 root.config(bg="#ff8600")
-Label(root,text="AI-Based-Medical-Imaging-Diagnosis" , font=("Arial",20), relief="solid",width=35).pack(pady=30)
+Label(root,text="AI-Based-Medical-Imaging-Diagnosis" , font=("Arial",23,"bold"), relief="solid",width=35).pack(pady=30)
 
 def to_exit():
     root.destroy()
@@ -65,14 +65,14 @@ Internal Server Error""")
         system("backend.py")
 
 
-l1=Label(text="Enter name : ").place(x=500,y=85,height=40,width=100)
-l2=Label(text="Enter age  : ").place(x=500,y=155,height=40,width=100)
+l1=Label(text="Enter name : ",font=("Arial",17), bg="#ff8600").place(x=480,y=85,height=40,width=150)
+l2=Label(text="Enter age  : ",font=("Arial",17) , bg="#ff8600").place(x=490,y=155,height=40,width=120)
 
-e1=Entry(root)
+e1=Entry(root,font=("Arial",15))
 e1.place(x=650,y=85,width=340,height=40)
-e2=Entry(root)
+e2=Entry(root,font=("Arial",15))
 e2.place(x=650,y=155,width=340,height=40)
-bt=Button(root,text="Back",bg="red",fg="white",font=("Arial",15),width=15,command=to_exit).place(x=200,y=650)
+bt=Button(root,text="Back",bg="red",fg="white",font=("Arial",20),width=15,command=to_exit).place(x=200,y=650)
 
-bt1=Button(root,text="submit",bg="lightgreen",fg="red",font=("Arial",15),width=15,command=to_submit).place(x=1100,y=650)
+bt1=Button(root,text="submit",bg="lightgreen",fg="red",font=("Arial",20),width=15,command=to_submit).place(x=1100,y=650)
 root.mainloop()

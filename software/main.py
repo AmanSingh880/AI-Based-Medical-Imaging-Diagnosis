@@ -25,11 +25,11 @@ def to_result():
     os.system("dighist.py")
 def to_exit():
     root.destroy()
-title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 25))
-title_label.place(x=500,y=80)
+title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 36, "bold"), fg="black", bg="#ff8600") 
+title_label.place(x=320,y=60)
 
-date_label = Label(root, text="Present Date", font=("Arial", 20))
-date_label.place(x=650,y=150)
+date_label = Label(root, text="Present Date", font=("Arial", 25,"bold"), bg="#ff8600")
+date_label.place(x=650,y=130)
 get_current_date()
 
 bt=Button(root,text="Image Upload",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_upload)
@@ -44,7 +44,7 @@ bt2.place(x=530,y=300)
 bt3=Button(root,text="Diagnosis Result",font=("Arial", 15),bg="yellow" ,fg="green" ,width=20,command=to_result)
 bt3.place(x=800,y=300)
 
-bt4=Button(root,text="Exit",font=("Arial", 15),bg="red" ,fg="green" ,width=20,command=to_exit)
+bt4=Button(root,text="Exit",font=("Arial", 15),bg="red" ,fg="white" ,width=20,command=to_exit)
 bt4.place(x=100,y=650)
 
 root.mainloop()

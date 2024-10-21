@@ -31,9 +31,9 @@ result=a[4]
 
 
 Label(root,text="AI-Based-Medical-Imaging-Diagnosis",font=("Arial",20),relief="solid",width=40).pack(pady=30)
-name_l=Label(root,text="Enter Name",font=("Arial",20),fg="skyblue")
+name_l=Label(root,text="Enter Name",font=("Arial",20),fg="black")
 name_l.place(x=450,y=105,width=200,height=50)
-age_l=Label(root,text="Enter Age",font=("Arial",20),fg="skyblue")
+age_l=Label(root,text="Enter Age",font=("Arial",20),fg="black")
 age_l.place(x=850,y=105,width=200,height=50)
 result_l=Label(root,text="Result",font=("Arial",25),fg="blue")
 result_l.place(x=400,y=300,width=700,height=70)

@@ -51,8 +51,8 @@ def save_image_path():
 
 # Title label at the upper center
 
-title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 20))
-title_label.place(x=500,y=80)
+title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 36, "bold"), fg="black", bg="#ff8600") 
+title_label.place(x=320,y=80)
 
 image_entry = Entry(font=("Arial", 12), width=20)
 image_entry.place(x=500,y=180)

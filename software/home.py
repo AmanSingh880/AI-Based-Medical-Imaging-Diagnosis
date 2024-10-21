@@ -14,10 +14,10 @@ def open():
 def exit():
     root.destroy()
 
-title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 20))
-title_label.place(x=500,y=80)
+title_label = Label(root, text="AI-Based Medical Imaging Diagnosis", font=("Arial", 36, "bold"), fg="black", bg="#ff8600") 
+title_label.place(x=350,y=80)
 
-date_label = Label(root, text="Present Date", bg="lightgray", font=("Arial", 15))
+date_label = Label(root, text="Present Date", font=("Arial", 25,"bold"), bg="#ff8600")
 date_label.place(x=600,y=150)
 get_current_date()
 
