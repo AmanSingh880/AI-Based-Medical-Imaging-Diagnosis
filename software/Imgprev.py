@@ -12,14 +12,14 @@ def openmain():
     system("main.py")
 
 image_path = os.path.join('uploads', 'image.jpeg')
-frame = Frame(root, bg="lightgray", bd=2, relief="sunken")
-frame.place(relx=0.5, rely=0.6, anchor="center", width=500, height=400)
+frame = Frame(root, bg="#ff8600", bd=6, relief="sunken")
+frame.place(relx=0.49, rely=0.5, anchor="center", width=600, height=500)
 img = Image.open(image_path)
 img.thumbnail((280, 180))  # Resize for display
 img = ImageTk.PhotoImage(img)    
-image_label = Label(frame, image=img, bg="lightgray")
-image_label.image = img  # Keep a reference to the image
-image_label.place(relx=0.5, rely=0.5, anchor="center")
+image_label = Label(frame, image=img, bg="#ff8850",bd=6)
+image_label.image = img
+image_label.place(relx=0.5, rely=0.5, anchor="center",width=450, height=350)
 
 def showimg():
     img_path = os.path.join('uploads', 'image.jpeg')
